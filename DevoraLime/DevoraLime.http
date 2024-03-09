@@ -1,0 +1,6 @@
+@DevoraLime_HostAddress = http://localhost:5228
+
+GET {{DevoraLime_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

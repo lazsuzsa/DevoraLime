@@ -1,0 +1,6 @@
+@DevoraLime.WebApi_HostAddress = http://localhost:5193
+
+GET {{DevoraLime.WebApi_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
