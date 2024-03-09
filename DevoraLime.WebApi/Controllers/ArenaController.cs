@@ -1,4 +1,5 @@
 ﻿using DevoraLime.Application.Services.Interfaces;
+using DevoraLime.Domain.DomainObjects;
 using Microsoft.AspNetCore.Mvc;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
@@ -19,7 +20,8 @@ namespace DevoraLime.WebApi.Controllers
         [HttpPost]
         public ActionResult<Guid> CreateArena(int numberOfHeroes)
         {
-            Guid arenaId = _arenaService.Create(numberOfHeroes);
+            Arena arena = _arenaService.GetNewArena(numberOfHeroes);
+            Guid arenaId = _arenaService.Create(arena);
             return Ok(arenaId);
         }
 

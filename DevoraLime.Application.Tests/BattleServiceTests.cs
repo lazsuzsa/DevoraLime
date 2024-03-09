@@ -1,9 +1,8 @@
 using DevoraLime.Application.Services;
-using DevoraLime.Application.Services.Interfaces;
 using DevoraLime.Domain.DomainObjects;
 using DevoraLime.Domain.DomainObjects.Interfaces;
 using DevoraLime.Domain.Factories;
-using Moq;
+using Shouldly;
 
 namespace DevoraLime.Application.Tests
 {
@@ -13,13 +12,13 @@ namespace DevoraLime.Application.Tests
         [TestMethod]
         public void PerformBattleTest()
         {
-            var arena = CreateArena(100);
-
+            Arena arena = CreateArena(100);
             BattleService battleService = new BattleService();
 
             var history = battleService.PerformBattle(arena);
-        }
 
+            history.ShouldNotBeNull();
+        }
 
         private Arena CreateArena(uint numberOfHeroes)
         {

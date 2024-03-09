@@ -5,6 +5,6 @@ namespace DevoraLime.Infrastructure.Repositories.Interfaces
     public interface IArenaRepository
     {
         Guid InsertArena(Arena arena);
-        Arena GetArena(Guid id);
+        Arena? GetArena(Guid id);
     }
 }

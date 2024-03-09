@@ -15,8 +15,11 @@
         bool IsKilled { get; set; }
 
         void Rest();
+
         void Fight();
+
         void Attack(IHero hero);
+
         void Kill(IHero hero);
     }
 }

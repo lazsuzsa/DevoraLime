@@ -1,6 +1,6 @@
 ﻿using DevoraLime.Domain.DomainObjects.Interfaces;
 
-namespace DevoraLime.Objects
+namespace DevoraLime.Domain.DomainObjects
 {
     public abstract class Hero : IHero
     {
@@ -11,7 +11,7 @@ namespace DevoraLime.Objects
         public bool IsDead => IsKilled || LifePower < (MaximumLifePower / 4);
         public bool IsKilled { get; set; }
 
-        public Hero() 
+        public Hero()
         {
             LifePower = MaximumLifePower;
         }
@@ -32,15 +32,13 @@ namespace DevoraLime.Objects
 
         public void Kill(IHero hero)
         {
-            if (hero != null)
-            {
-                hero.IsKilled = true;
-            }
+            hero.IsKilled = true;
         }
 
         public override string ToString()
         {
-            string state = IsDead ? "Dead" : "Alive"; 
+            var killedState = IsKilled ? "(Killed)" : "";
+            var state = IsDead ? $"Dead{killedState}" : "Alive";
             return $"{Name} [{state};LifePower:{LifePower}]";
         }
 

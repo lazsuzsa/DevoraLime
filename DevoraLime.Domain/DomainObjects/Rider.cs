@@ -1,5 +1,4 @@
 ﻿using DevoraLime.Domain.DomainObjects.Interfaces;
-using DevoraLime.Objects;
 
 namespace DevoraLime.Domain.DomainObjects
 {
@@ -7,7 +6,7 @@ namespace DevoraLime.Domain.DomainObjects
     {
         public override string Name => $"Rider#{Id}";
 
-        public override uint MaximumLifePower { get; } = 150;
+        public override uint MaximumLifePower => 150;
 
         public override void Attack(IHero defender)
         {

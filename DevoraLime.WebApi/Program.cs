@@ -1,6 +1,8 @@
 
 using DevoraLime.Application.Services;
 using DevoraLime.Application.Services.Interfaces;
+using DevoraLime.Domain.Factories;
+using DevoraLime.Domain.Factories.Interfaces;
 using DevoraLime.Infrastructure.Repositories;
 using DevoraLime.Infrastructure.Repositories.Interfaces;
 
@@ -13,6 +15,7 @@ namespace DevoraLime.WebApi
             var builder = WebApplication.CreateBuilder(args);
 
             // Add services to the container.
+            builder.Services.AddSingleton<IHeroFactory, RandomHeroFactory>();
 
             builder.Services.AddScoped<IBattleService, BattleService>();
             builder.Services.AddScoped<IArenaService, ArenaService>();

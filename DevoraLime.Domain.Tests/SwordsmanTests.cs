@@ -41,5 +41,12 @@ namespace DevoraLime.Domain.Tests
             swordsman.IsKilled.ShouldBeFalse();
             bowman.IsKilled.ShouldBeTrue();
         }
+
+        [TestMethod]
+        public void NameTest()
+        {
+            var swordsman = new Swordsman { Id = 100 };
+            swordsman.Name.ShouldBe($"Swordsman#{swordsman.Id}");
+        }
     }
 }

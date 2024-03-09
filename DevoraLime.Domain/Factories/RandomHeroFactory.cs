@@ -20,7 +20,7 @@ namespace DevoraLime.Domain.Factories
                     return new Swordsman();
                 default:
                     return new Bowman();
-            };
+            }
         }
     }
 }

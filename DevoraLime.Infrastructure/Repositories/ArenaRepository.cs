@@ -6,10 +6,10 @@ namespace DevoraLime.Infrastructure.Repositories
 {
     public class ArenaRepository : IArenaRepository
     {
-        private const string DBNAME = "devoralime.db";
-        public Arena GetArena(Guid id)
+        private const string DbName = "devoralime.db";
+        public Arena? GetArena(Guid id)
         {
-            using (var db = new LiteDatabase(DBNAME))
+            using (var db = new LiteDatabase(DbName))
             {
                 var collection = db.GetCollection<Arena>("arena");
                 var arena = collection.FindOne(x => x.Id == id);
@@ -19,7 +19,7 @@ namespace DevoraLime.Infrastructure.Repositories
 
         public Guid InsertArena(Arena arena)
         {
-            using (var db = new LiteDatabase(DBNAME))
+            using (var db = new LiteDatabase(DbName))
             {
                 var collection = db.GetCollection<Arena>("arena");
                 if (arena.Id == Guid.Empty)

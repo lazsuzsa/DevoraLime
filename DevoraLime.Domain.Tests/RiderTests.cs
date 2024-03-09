@@ -41,5 +41,13 @@ namespace DevoraLime.Domain.Tests
             rider.IsKilled.ShouldBeFalse();
             bowman.IsKilled.ShouldBeTrue();
         }
+
+        [TestMethod]
+        public void NameTest()
+        {
+            var rider = new Rider { Id = 100 };
+            rider.Name.ShouldBe($"Rider#{rider.Id}");
+        }
+
     }
 }

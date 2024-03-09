@@ -1,21 +1,20 @@
 ﻿using DevoraLime.Domain.DomainObjects.Interfaces;
-using DevoraLime.Objects;
 
 namespace DevoraLime.Domain.DomainObjects
 {
     public class Bowman : Hero
     {
-        private const uint SURVIVECHANCE = 60;
+        private const uint SurviveChance = 60;
 
         public override string Name => $"Bowman#{Id}";
 
-        public override uint MaximumLifePower { get; } = 100;
+        public override uint MaximumLifePower => 100;
 
         public override void Attack(IHero defender)
         {
             if (defender is Rider)
             {
-                if (!RandomSurvived(SURVIVECHANCE)) { Kill(defender); }
+                if (!RandomSurvived(SurviveChance)) { Kill(defender); }
             }
             if (defender is Swordsman) { Kill(defender); }
             if (defender is Bowman) { Kill(defender); }

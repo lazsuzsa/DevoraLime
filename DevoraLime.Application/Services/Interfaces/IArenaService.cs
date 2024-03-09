@@ -4,7 +4,8 @@ namespace DevoraLime.Application.Services.Interfaces
 {
     public interface IArenaService
     {
-        Guid Create(int numberOfHeroes);
-        Arena Get(Guid id);
+        Arena GetNewArena(int numberOfHeroes);
+        Guid Create(Arena arena);
+        Arena? Get(Guid id);
     }
 }
