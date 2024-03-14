@@ -3,17 +3,19 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.8.34330.188
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DevoraLime.Domain", "DevoraLime.Domain\DevoraLime.Domain.csproj", "{0E3D8CA7-E815-4C1F-80C0-F4DD7AAFD155}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DevoraLime.Domain", "DevoraLime.Domain\DevoraLime.Domain.csproj", "{0E3D8CA7-E815-4C1F-80C0-F4DD7AAFD155}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DevoraLime.Application", "DevoraLime.Application\DevoraLime.Application.csproj", "{7ABBCD9B-8051-46B4-AB0B-2C8A0940D7EA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DevoraLime.Application", "DevoraLime.Application\DevoraLime.Application.csproj", "{7ABBCD9B-8051-46B4-AB0B-2C8A0940D7EA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DevoraLime.Infrastructure", "DevoraLime.Infrastructure\DevoraLime.Infrastructure.csproj", "{ED49E10E-AD60-445D-8A6F-25844AC20FB7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DevoraLime.Infrastructure", "DevoraLime.Infrastructure\DevoraLime.Infrastructure.csproj", "{ED49E10E-AD60-445D-8A6F-25844AC20FB7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DevoraLime.WebApi", "DevoraLime.WebApi\DevoraLime.WebApi.csproj", "{1F5D8EFF-302F-4C92-8E1A-AE415CD44F38}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DevoraLime.WebApi", "DevoraLime.WebApi\DevoraLime.WebApi.csproj", "{1F5D8EFF-302F-4C92-8E1A-AE415CD44F38}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DevoraLime.Domain.Tests", "DevoraLime.Domain.Tests\DevoraLime.Domain.Tests.csproj", "{BB5E6667-8B95-4EB7-8802-E624F728A212}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DevoraLime.Domain.Tests", "DevoraLime.Domain.Tests\DevoraLime.Domain.Tests.csproj", "{BB5E6667-8B95-4EB7-8802-E624F728A212}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DevoraLime.Application.Tests", "DevoraLime.Application.Tests\DevoraLime.Application.Tests.csproj", "{B094BFD9-AE60-4DB0-875F-A302E77E34DA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DevoraLime.Application.Tests", "DevoraLime.Application.Tests\DevoraLime.Application.Tests.csproj", "{B094BFD9-AE60-4DB0-875F-A302E77E34DA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DevoraLime.Abstraction", "DevoraLime.Abstraction\DevoraLime.Abstraction.csproj", "{BF97181D-258B-4F19-A88C-97BE819CE404}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,6 +47,10 @@ Global
 		{B094BFD9-AE60-4DB0-875F-A302E77E34DA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B094BFD9-AE60-4DB0-875F-A302E77E34DA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B094BFD9-AE60-4DB0-875F-A302E77E34DA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BF97181D-258B-4F19-A88C-97BE819CE404}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BF97181D-258B-4F19-A88C-97BE819CE404}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BF97181D-258B-4F19-A88C-97BE819CE404}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BF97181D-258B-4F19-A88C-97BE819CE404}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

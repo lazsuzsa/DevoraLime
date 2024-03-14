@@ -4,6 +4,6 @@ namespace DevoraLime.Domain.Factories.Interfaces
 {
     public interface IHeroFactory
     {
-        IHero CreateHero();
+        IHero CreateHero(int id);
     }
 }

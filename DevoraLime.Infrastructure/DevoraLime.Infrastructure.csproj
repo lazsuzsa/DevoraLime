@@ -11,6 +11,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\DevoraLime.Abstraction\DevoraLime.Abstraction.csproj" />
     <ProjectReference Include="..\DevoraLime.Domain\DevoraLime.Domain.csproj" />
   </ItemGroup>
 

@@ -1,7 +1,7 @@
-﻿using DevoraLime.Application.Services;
+﻿using DevoraLime.Abstraction.Interfaces.Repositories;
+using DevoraLime.Application.Services;
 using DevoraLime.Domain.DomainObjects;
 using DevoraLime.Domain.Factories.Interfaces;
-using DevoraLime.Infrastructure.Repositories.Interfaces;
 using Moq;
 using Shouldly;
 
@@ -16,7 +16,7 @@ namespace DevoraLime.Application.Tests
             var mockArenaRepository = new Mock<IArenaRepository>();
 
             var mockHeroFactory = new Mock<IHeroFactory>();
-            mockHeroFactory.Setup(x => x.CreateHero()).Returns(new Rider());
+            mockHeroFactory.Setup(x => x.CreateHero(It.IsAny<int>())).Returns(new Rider());
 
             var arenaService = new ArenaService(mockArenaRepository.Object, mockHeroFactory.Object);
             var arena = arenaService.GetNewArena(100);
@@ -31,7 +31,7 @@ namespace DevoraLime.Application.Tests
             var mockArenaRepository = new Mock<IArenaRepository>();
 
             var mockHeroFactory = new Mock<IHeroFactory>();
-            mockHeroFactory.Setup(x => x.CreateHero()).Returns(new Rider());
+            mockHeroFactory.Setup(x => x.CreateHero(It.IsAny<int>())).Returns(new Rider());
 
             var arenaService = new ArenaService(mockArenaRepository.Object, mockHeroFactory.Object);
             var arena = arenaService.GetNewArena(100);
@@ -49,7 +49,7 @@ namespace DevoraLime.Application.Tests
             var mockArenaRepository = new Mock<IArenaRepository>();
 
             var mockHeroFactory = new Mock<IHeroFactory>();
-            mockHeroFactory.Setup(x => x.CreateHero()).Returns(new Rider());
+            mockHeroFactory.Setup(x => x.CreateHero(It.IsAny<int>())).Returns(new Rider());
 
             var arenaService = new ArenaService(mockArenaRepository.Object, mockHeroFactory.Object);
             var mockArena = new Arena();
@@ -68,7 +68,7 @@ namespace DevoraLime.Application.Tests
             var mockArenaRepository = new Mock<IArenaRepository>();
 
             var mockHeroFactory = new Mock<IHeroFactory>();
-            mockHeroFactory.Setup(x => x.CreateHero()).Returns(new Rider());
+            mockHeroFactory.Setup(x => x.CreateHero(It.IsAny<int>())).Returns(new Rider());
 
             var arenaService = new ArenaService(mockArenaRepository.Object, mockHeroFactory.Object);
             var mockArena = new Arena();

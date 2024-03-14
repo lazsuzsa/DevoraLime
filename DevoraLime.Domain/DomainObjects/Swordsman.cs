@@ -11,8 +11,8 @@ namespace DevoraLime.Domain.DomainObjects
         public override void Attack(IHero defender)
         {
             if (defender is Rider) { }
-            if (defender is Swordsman) { Kill(defender); }
-            if (defender is Bowman) { Kill(defender); }
+            if (defender is Swordsman) { BeKilled(defender); }
+            if (defender is Bowman) { BeKilled(defender); }
 
             Fight();
             defender.Fight();

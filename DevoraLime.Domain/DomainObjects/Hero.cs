@@ -11,10 +11,6 @@ namespace DevoraLime.Domain.DomainObjects
         public bool IsDead => IsKilled || LifePower < (MaximumLifePower / 4);
         public bool IsKilled { get; set; }
 
-        public Hero()
-        {
-            LifePower = MaximumLifePower;
-        }
         public abstract void Attack(IHero hero);
 
         public void Rest()
@@ -30,9 +26,10 @@ namespace DevoraLime.Domain.DomainObjects
             LifePower /= 2;
         }
 
-        public void Kill(IHero hero)
+        public void BeKilled(IHero hero)
         {
             hero.IsKilled = true;
+            hero.LifePower = 0;
         }
 
         public override string ToString()

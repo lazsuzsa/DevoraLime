@@ -27,8 +27,7 @@ namespace DevoraLime.Application.Tests
             arena.Id = Guid.NewGuid();
             for (int i = 0; i < numberOfHeroes; i++)
             {
-                IHero newHero = heroFactory.CreateHero();
-                newHero.Id = i;
+                IHero newHero = heroFactory.CreateHero(i);
                 arena.Heroes.Add(newHero);
             }
             return arena;

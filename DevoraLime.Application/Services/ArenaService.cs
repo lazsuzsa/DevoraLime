@@ -1,8 +1,8 @@
-﻿using DevoraLime.Application.Services.Interfaces;
+﻿using DevoraLime.Abstraction.Interfaces.Repositories;
+using DevoraLime.Application.Services.Interfaces;
 using DevoraLime.Domain.DomainObjects;
 using DevoraLime.Domain.DomainObjects.Interfaces;
 using DevoraLime.Domain.Factories.Interfaces;
-using DevoraLime.Infrastructure.Repositories.Interfaces;
 
 namespace DevoraLime.Application.Services
 {
@@ -27,8 +27,7 @@ namespace DevoraLime.Application.Services
 
             for (int i = 0; i < numberOfHeroes; i++)
             {
-                IHero newHero = _heroFactory.CreateHero();
-                newHero.Id = i;
+                IHero newHero = _heroFactory.CreateHero(i);
                 arena.Heroes.Add(newHero);
             }
 

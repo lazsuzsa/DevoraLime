@@ -1,10 +1,10 @@
 
+using DevoraLime.Abstraction.Interfaces.Repositories;
 using DevoraLime.Application.Services;
 using DevoraLime.Application.Services.Interfaces;
 using DevoraLime.Domain.Factories;
 using DevoraLime.Domain.Factories.Interfaces;
 using DevoraLime.Infrastructure.Repositories;
-using DevoraLime.Infrastructure.Repositories.Interfaces;
 
 namespace DevoraLime.WebApi
 {

@@ -1,6 +1,6 @@
 ﻿using DevoraLime.Domain.DomainObjects;
 
-namespace DevoraLime.Infrastructure.Repositories.Interfaces
+namespace DevoraLime.Abstraction.Interfaces.Repositories
 {
     public interface IArenaRepository
     {

@@ -1,5 +1,5 @@
-﻿using DevoraLime.Domain.DomainObjects;
-using DevoraLime.Infrastructure.Repositories.Interfaces;
+﻿using DevoraLime.Abstraction.Interfaces.Repositories;
+using DevoraLime.Domain.DomainObjects;
 using LiteDB;
 
 namespace DevoraLime.Infrastructure.Repositories

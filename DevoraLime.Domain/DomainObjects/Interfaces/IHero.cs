@@ -20,6 +20,6 @@
 
         void Attack(IHero hero);
 
-        void Kill(IHero hero);
+        void BeKilled(IHero hero);
     }
 }
